@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/buses")
-@CrossOrigin(origins = "http://localhost:5500") // Adjust this based on frontend port
+@CrossOrigin(origins = "http://localhost:5500") // Adjust if needed
 public class BusController {
 
     @Autowired
@@ -30,16 +30,17 @@ public class BusController {
         return bus.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Add or Update a Bus
+    // Add a new Bus
     @PostMapping
-    public Bus createBus(@RequestBody Bus bus) {
-        return busService.saveBus(bus);
+    public ResponseEntity<Bus> createBus(@RequestBody Bus bus) {
+        Bus savedBus = busService.saveBus(bus);
+        return ResponseEntity.ok(savedBus);
     }
 
+    // Update existing Bus
     @PutMapping("/{id}")
     public ResponseEntity<Bus> updateBus(@PathVariable Long id, @RequestBody Bus busDetails) {
         Optional<Bus> optionalBus = busService.getBusById(id);
-
         if (optionalBus.isPresent()) {
             Bus updatedBus = busService.updateBus(optionalBus.get(), busDetails);
             return ResponseEntity.ok(updatedBus);
@@ -48,8 +49,7 @@ public class BusController {
         }
     }
 
-
-    // Delete a Bus
+    // Delete Bus
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBus(@PathVariable Long id) {
         Optional<Bus> optionalBus = busService.getBusById(id);
@@ -60,6 +60,4 @@ public class BusController {
             return ResponseEntity.notFound().build();
         }
     }
-
-
 }

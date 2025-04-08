@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Bus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long busId;
 
     private String name;
     private String bustype;
@@ -30,7 +30,7 @@ public class Bus {
                String toLocation, String departureTime, String departureDate, String arrivalDate,
                String arrivalTime, String duration, double fare, int seats, boolean waterBottle,
                boolean blankets, boolean chargingPoint, String boardingPoint, String droppingPoint) {
-        this.id = id;
+        this.busId = id;
         this.bustype = bustype;
         this.name = name;
         this.fromLocation = fromLocation;
@@ -101,11 +101,11 @@ public class Bus {
     }
 
     public Long getId() {
-        return id;
+        return busId;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.busId = id;
     }
 
     public String getArrivalTime() {

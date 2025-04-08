@@ -15,7 +15,7 @@
 ---
 
 ## Project current Dev status
-![UI Screenshot](screenshot/screenshot_2025-04-07_181744.png)
+![UI Screenshot](screenshot/Screenshot-2025-04-07-181744.png)
 
 
 ---

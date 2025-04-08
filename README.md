@@ -1,6 +1,6 @@
-# SmartBus – Bus Ticket Booking System
+# Smartbus – Bus Ticket Booking System
 
-**SmartBus** is a full-featured online bus ticket booking application that allows users to search for available buses, view and select seats, and book tickets. Admins can manage bus schedules, routes, and seat availability. The system is designed for a seamless user experience and robust backend management.
+**Smartbus** is a full-featured online bus ticket booking application that allows users to search for available buses, view and select seats, and book tickets. Admins can manage bus schedules, routes, and seat availability. The system is designed for a seamless user experience and robust backend management.
 
 ---
 
@@ -15,7 +15,7 @@
 ---
 
 ## Project current Dev status
-![UI Screenshot](screenshot/screenshot_2025-04-07_181744.png)
+![UI Screenshot](screenshot/Screenshot-2025-04-07-181744.png)
 
 
 ---
